@@ -1,0 +1,7 @@
+Motivasi dan Harapan
+
+Motivasi saya mengikuti Bootcamp Laravel Web ini adalah karena ingin me-recall kembali pelajaran yang sudah saya dapatkan selama awal masa perkuliahan,
+agar saya bisa menggunakannya kembali dan dapat memperkuat skill saya sehingga bisa mempermudah saya mendapatkan pekerjaan sebagai seorang fresh graduate
+
+Harapan saya dengan mengikuti Bootcamp ini, saya berharap skill yang saya dapatkan bisa memudahkan saya mendapatkan pekerjaan dan memahami POV front-end dari 
+sudut pandang UI/UX Designer
