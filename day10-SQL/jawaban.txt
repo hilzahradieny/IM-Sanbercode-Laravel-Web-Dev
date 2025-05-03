@@ -1,0 +1,67 @@
+>Soal 1 Membuat Database
+
+//database myshop
+CREATE DATABASE myshop;
+
+>Soal 2 Membuat Table di Dalam Database
+
+//table users
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY ,
+    name VARCHAR(255) NOT null,
+    email VARCHAR(255) NOT null,
+    pass VARCHAR(255) NOT null
+);
+
+//table categories
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT null
+)
+
+//table items
+CREATE TABLE items (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT null,
+    description VARCHAR(255) NOT null,
+    price INT NOT null,
+    stock INT NOT null,
+    category_id INT NOT null,
+    FOREIGN KEY(category_id) REFERENCES categories(id)
+)
+
+
+>Soal 3 Memasukkan Data pada Table
+
+//insert table users
+INSERT INTO users (name, email, pass) VALUES ('John Doe', 'john@doe.com', 'john123');
+INSERT INTO users (name, email, pass) VALUES ('Jone Doe', 'jane@doe.com', 'jenita123');
+
+//insert table categories
+INSERT INTO categories (name) VALUES ('Gadget'), ('Cloth'), ('Men'), ('Women'), ('Branded');
+
+//insert table items
+INSERT INTO items (name, description, price, stock, category_id) VALUES 
+('Sumsang b50', 'hape keren dari merek sumsang', 4000000, 100, 1),
+('Uniklooh', 'baju keren dari brand ternama', 500000, 50, 2),
+('IMHO Watch', 'jam tangan anak yang jujur banget', 2000000, 100, 1);
+
+
+
+>Soal 4 Mengambil Data dari Database
+
+//a.Mengambil data users
+SELECT id, name, email FROM users;
+
+//b.Mengambil data items
+-Data items diatas 1juta
+SELECT * FROM `items` WHERE price > 1000000;
+-Data item yang memiliki name serupa "watch"
+SELECT * FROM `items` WHERE name LIKE "%watch%";
+
+//c.Menampilkan data items join dengan kategori
+SELECT items.*, categories.name FROM items INNER JOIN categories ON items.category_id = categories.id;
+SELECT items.*, categories.name AS category FROM items INNER JOIN categories ON items.category_id = categories.id;   //mengganti nama kolom joinnya dari name, menjadi category
+
+>Soal 5 Mengubah Data dari Database
+UPDATE items SET price=2500000 WHERE id=1
