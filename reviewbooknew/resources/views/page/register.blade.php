@@ -7,16 +7,18 @@
 </head>
 <body>
     <h1>Buat Account Baru</h1>
-    <a href="welcome" class="button">Back to welcome page</a>
+    <a href="/home" class="button">Back to home page</a>
     <h2>Sign Up Form</h2>
-    <form action="/home" method="POST">
+    
+    <form action="/welcome" method="POST">
         @csrf
-        <label for="firststname">First Name:</label> <br>
-        <input type="text" name="firststname" id="firststname">
+        <label for="firstname">First Name:</label> <br>
+        <input type="text" name="firstname" id="firstname">
         <br><br> 
         <label for="lastname">Last Name:</label> <br>
         <input type="text" name="lastname" id="lastname">
-        <br><br> 
+        
+         <br><br> 
         <label for="gender">Gender:</label> <br>
         <input type="radio" name="gender" value="1"/> Male <br>
         <input type="radio" name="gender" value="2"/> Female <br>
@@ -39,8 +41,10 @@
         <br><br>
         <label for="bio">Bio:</label> <br>
         <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+        
         <br><br>
-        <button>Sign Up</button>
+
+        <input type="submit" value="Sign Up">
         <br><br>
     </form>
 </body>
