@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-<h1>SanberBook</h1> <br>
+@extends('layout.master')
+@section('tittle')
+    Home
+@endsection
+
+@section('content')
+    <h1>SanberBook</h1> <br>
     <h2>Social Media Developer Santai Berkualitas</h2>
     <p>Belajar dan berbagi agar hidup ini semakin berkualitas</p> <br>
     <h3>Benefit Join di SanberBook</h3>
@@ -22,5 +20,4 @@
         <li>Mendaftar di <a href="/register">Form Sign Up</a></li>
         <li>Selesai!</li>
     </ol><br>
-</body>
-</html>
+@endsection

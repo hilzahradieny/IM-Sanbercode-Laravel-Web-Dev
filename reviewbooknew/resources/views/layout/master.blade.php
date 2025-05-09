@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - Company Bootstrap Template</title>
+  <title>@yield('tittle')</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,32 +38,19 @@
 
 <body class="starter-page-page">
   @include('partial.header')
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title accent-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Starter Page</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Starter Page</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
+  <main class="main" style="min-height: 70vh ">
 
     <!-- Starter Section Section -->
     <section id="starter-section" class="starter-section section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Starter Section</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>@yield('tittle')</h2> 
+        <p></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
+        @yield('content')
       </div>
 
     </section><!-- /Starter Section Section -->
